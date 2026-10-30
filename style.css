@@ -1,0 +1,496 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark: #082f35;
+    --text: #4b595c;
+    --peach: #fbf3ee;
+    --orange: #c58c6c;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+}
+
+h1, h2, h3, .button, .logo {
+    font-family: 'Roboto Mono', monospace;
+}
+
+h1, h2, h3 {
+    color: var(--dark);
+    line-height: 1.25;
+}
+
+/* HERO SECTION */
+
+.hero {
+    padding: 25px 7% 55px;
+    background-color: var(--peach);
+    background-image:
+        linear-gradient(rgba(8,47,53,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(8,47,53,.04) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto 55px;
+}
+
+.logo {
+    color: var(--dark);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7%;
+    align-items: center;
+}
+
+.hero-text h1 {
+    font-size: clamp(35px, 4.5vw, 60px);
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+    color: #102f34;
+}
+
+.hero-text h1 span:first-child {
+    color: #b88468;
+}
+
+.hero-text h1 span:nth-child(2) {
+    color: #80675a;
+}
+
+.hero-text p {
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+.hero-image {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 9px;
+}
+
+/* BUTTONS */
+
+.button {
+    display: inline-block;
+    padding: 12px 16px;
+    border: 2px solid #758083;
+    border-radius: 6px;
+    background: #fffaf6;
+    color: #20363a;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    transition: .3s;
+}
+
+.button:hover {
+    background: #f0dfd3;
+    transform: translateY(-2px);
+}
+
+/* RATINGS */
+
+.rating {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 9px;
+    margin-top: 16px;
+    font-size: 13px;
+}
+
+.rating span, .stars {
+    color: #d79a76;
+    letter-spacing: 3px;
+}
+
+.rating small {
+    font-size: 10px;
+}
+
+/* GENERAL SECTIONS */
+
+.section {
+    width: 86%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.feature {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 7%;
+    padding-top: 75px;
+    padding-bottom: 45px;
+}
+
+.feature img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.feature-text h2 {
+    font-size: clamp(28px, 3vw, 40px);
+    margin-bottom: 22px;
+}
+
+.feature-text p {
+    font-size: 13px;
+}
+
+.check-list, .plan ul {
+    list-style: none;
+}
+
+.check-list li {
+    position: relative;
+    padding-left: 28px;
+    margin: 14px 0;
+    font-size: 13px;
+}
+
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    border: 1px solid #829092;
+    width: 17px;
+    height: 17px;
+    text-align: center;
+    line-height: 17px;
+    border-radius: 2px;
+}
+
+/* REVERSE SECTION */
+
+.reverse {
+    padding-top: 25px;
+    padding-bottom: 75px;
+}
+
+.reverse img {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.reverse .feature-text {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+/* READING JOURNEY */
+
+.journey {
+    padding: 45px 5%;
+    border-radius: 10px;
+    background-color: #f6f5f1;
+    background-image:
+        linear-gradient(rgba(8,47,53,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(8,47,53,.04) 1px, transparent 1px),
+        linear-gradient(110deg, #fbf3ee, #e8f5f8);
+    background-size: 20px 20px, 20px 20px, auto;
+}
+
+.journey > h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 38px;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.step b {
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border: 2px solid #829092;
+    border-radius: 3px;
+    font-family: 'Roboto Mono', monospace;
+    color: var(--dark);
+}
+
+.step h3 {
+    font-size: 13px;
+    margin-top: 14px;
+}
+
+/* MEMBERSHIP */
+
+.membership {
+    padding-top: 80px;
+    padding-bottom: 60px;
+}
+
+.membership > h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.plans {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 850px;
+    margin: auto;
+}
+
+.plan {
+    padding: 22px 18px;
+    border: 1px solid #e4e6e3;
+    border-radius: 7px;
+    box-shadow: 0 3px 12px rgba(0,0,0,.03);
+}
+
+.plan h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.plan h2 {
+    font-size: 27px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ecece8;
+}
+
+.plan h2 small {
+    font: 12px Arial, sans-serif;
+    color: #657175;
+}
+
+.plan ul {
+    padding: 14px 0 20px;
+}
+
+.plan li {
+    font-size: 13px;
+    margin: 8px 0;
+}
+
+.plan li::before {
+    content: "✓";
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    margin-right: 8px;
+    border: 1px solid #829092;
+    text-align: center;
+    line-height: 17px;
+}
+
+.plan .button {
+    display: block;
+    width: 100%;
+}
+
+.featured {
+    background: linear-gradient(140deg, #fcf4ef, #e6f2f5);
+    transform: translateY(-8px);
+}
+
+/* TESTIMONIAL */
+
+.testimonial {
+    text-align: center;
+    max-width: 850px;
+    padding: 25px 0 85px;
+}
+
+.testimonial blockquote {
+    font-family: 'Roboto Mono', monospace;
+    font-size: clamp(20px, 2.5vw, 30px);
+    font-weight: bold;
+    line-height: 1.4;
+    color: var(--dark);
+    margin: 20px auto;
+}
+
+.testimonial p {
+    font-size: 13px;
+    color: #7b8587;
+}
+
+/* FOOTER */
+
+.footer {
+    padding: 55px 7% 22px;
+    background-color: var(--dark);
+    color: white;
+    text-align: center;
+    border-radius: 12px 12px 0 0;
+    background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.footer h2 {
+    color: white;
+    font-size: clamp(30px, 3.5vw, 45px);
+    margin-bottom: 25px;
+}
+
+.footer-button {
+    background: transparent;
+    color: white;
+    border-color: #a8b9ba;
+}
+
+.footer .rating {
+    justify-content: center;
+    margin-bottom: 45px;
+}
+
+.footer .rating small {
+    color: #dce6e7;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255,255,255,.2);
+    font-size: 11px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 700px) {
+    .hero {
+        padding: 20px 6% 35px;
+    }
+
+    .navbar {
+        margin-bottom: 32px;
+    }
+
+    .hero-content, .feature {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .hero-text h1 {
+        font-size: clamp(38px, 10vw, 55px);
+    }
+
+    .hero-image {
+        height: 270px;
+    }
+
+    .section {
+        width: 88%;
+    }
+
+    .feature {
+        padding-top: 48px;
+        padding-bottom: 35px;
+    }
+
+    .feature img {
+        height: 260px;
+    }
+
+    .reverse img, .reverse .feature-text {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .reverse .feature-text {
+        order: 1;
+    }
+
+    .reverse img {
+        order: 2;
+    }
+
+    .journey {
+        padding: 32px 7%;
+    }
+
+    .journey > h2 {
+        font-size: 30px;
+    }
+
+    .steps {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px 18px;
+    }
+
+    .membership {
+        padding-top: 55px;
+    }
+
+    .membership > h2 {
+        font-size: 30px;
+    }
+
+    .plans {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+    }
+
+    .featured {
+        transform: none;
+    }
+
+    .testimonial {
+        padding-bottom: 55px;
+    }
+
+    .footer {
+        padding: 42px 6% 20px;
+    }
+}
+
+@media (max-width: 380px) {
+    .hero-text h1 {
+        letter-spacing: -1px;
+    }
+
+    .button {
+        font-size: 10px;
+        padding: 11px 9px;
+    }
+
+    .step h3 {
+        font-size: 11px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+}
